@@ -33,8 +33,8 @@ df = pd.DataFrame(te_ary, columns=te.columns_)
 #Data Mining
 
 #apriori e regras
-frequent_itemsets = apriori(df, min_support=0.01, use_colnames=True)
-regras = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.7)
+frequent_itemsets = apriori(df, min_support=0.1, use_colnames=True)
+regras = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.5)
 
 
 print(regras)
